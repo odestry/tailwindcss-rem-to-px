@@ -2,6 +2,7 @@
 
 .cache
 .DS_Store
+.vscode
 .idea
 *.log
 *.tgz
