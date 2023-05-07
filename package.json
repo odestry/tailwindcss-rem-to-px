@@ -1,7 +1,7 @@
 {
   "name": "tailwindcss-rem-to-px",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "packageManager": "pnpm@8.1.1",
   "description": "tailwindcss-rem-to-px",
   "author": "Odestry",
