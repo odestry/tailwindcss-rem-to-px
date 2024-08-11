@@ -12,11 +12,6 @@
     "url": "git+https://github.com/odestry/tailwindcss-rem-to-px.git"
   },
   "bugs": "https://github.com/odestry/tailwindcss-rem-to-px/issues",
-  "keywords": [
-    "tailwindcss",
-    "tailwind plugin",
-    "rem to px unit"
-  ],
   "sideEffects": false,
   "exports": {
     ".": {

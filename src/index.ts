@@ -7,7 +7,7 @@ interface PluginOptions {
 }
 
 export default plugin.withOptions(
-  // @ts-expect-error
+
   () => {},
   ({ baseFontSize = 16 }: PluginOptions = {}) => ({
     theme: replaceRemWithPx(defaultTheme, baseFontSize),
