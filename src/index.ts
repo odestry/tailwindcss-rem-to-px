@@ -6,10 +6,17 @@ interface PluginOptions {
   baseFontSize?: number
 }
 
-export default plugin.withOptions(
+export default plugin.withOptions<PluginOptions>(
+  (options) => {
+    return function ({ addBase, addComponents, addUtilities, theme }) {
+      // Plugin functionality can be added here if needed in the future
+    }
+  },
+  (options) => {
+    const baseFontSize = options?.baseFontSize ?? 16
 
-  () => {},
-  ({ baseFontSize = 16 }: PluginOptions = {}) => ({
-    theme: replaceRemWithPx(defaultTheme, baseFontSize),
-  }),
+    return {
+      theme: replaceRemWithPx(defaultTheme, baseFontSize) as typeof defaultTheme,
+    }
+  },
 )

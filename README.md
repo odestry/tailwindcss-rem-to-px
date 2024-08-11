@@ -17,7 +17,7 @@ A Tailwind CSS plugin automatically converts all REM units to PX units in your T
 To install the plugin, run the following command in your project directory:
 
 ```bash
-npm install tailwindcss-rem-to-px
+npm install tailwindcss-rem-to-px # or pnpm add tailwindcss-rem-to-px
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ import remToPx from 'tailwindcss-rem-to-px';
 import type { Config } from 'tailwindcss'
 import remToPx from 'tailwindcss-rem-to-px';
 
-const config: Config = {
+export default {
   content: [
     // ...
   ],
@@ -46,9 +46,7 @@ const config: Config = {
   plugins: [
     remToPx(),
   ],
-}
-
-export default config
+} satisfies Config
 ```
 
 3. (Optional) Configure the base font size:
@@ -68,7 +66,7 @@ This will use 14px as the base for REM to PX conversions.
 With this plugin, Tailwind classes like:
 
 ```html
-<div class="text-2xl p-4 m-2">Hello, World!</div>
+<p class="text-2xl p-4 m-2">Hello, World!</p>
 ```
 
 Which would normally compile to:
@@ -77,9 +75,11 @@ Which would normally compile to:
 .text-2xl {
   font-size: 1.5rem;
 }
+
 .p-4 {
   padding: 1rem;
 }
+
 .m-2 {
   margin: 0.5rem;
 }
@@ -91,9 +91,11 @@ Will instead compile to:
 .text-2xl {
   font-size: 24px;
 }
+
 .p-4 {
   padding: 16px;
 }
+
 .m-2 {
   margin: 8px;
 }

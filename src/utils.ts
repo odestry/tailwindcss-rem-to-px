@@ -21,6 +21,7 @@ export function replaceRemWithPx(input: RemToPxInput, baseFontSize = 16): RemToP
   if (typeof input === 'object') {
     const ret: Record<string, RemToPxInput> = {}
     for (const key in input)
+      // @ts-expect-error issue with any type
       ret[key] = replaceRemWithPx(input[key], baseFontSize)
 
     return ret
