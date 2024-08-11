@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.0",
   "packageManager": "pnpm@8.1.1",
-  "description": "tailwindcss-rem-to-px",
+  "description": "A Tailwind CSS plugin automatically converts all REM units to PX units in your Tailwind styles.",
   "author": "Odestry",
   "license": "MIT",
   "homepage": "https://github.com/odestry/tailwindcss-rem-to-px#readme",
